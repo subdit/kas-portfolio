@@ -1,38 +1,107 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&display=swap');
+:root{
+--sidebar-flex:1.5;
+--condiv-flex:6;
+--fontsize-p:1.2rem;
+--fontsize-nav:1.6rem;
+--typing-font:3rem;
+}
+*
+{
+margin:0;
+padding: 0;
+}
+body
+{
+font-family: 'Raleway';
+}
+.App
+{
+display: flex;
+width: 100vw;
+min-height: 100vh;
+}
+/* .condiv class is for the right side content container*/
+.condiv
+{
+padding: 100px ;
+background-color: #f1f2f7;
+flex:var(--condiv-flex);
+}
+nav
+{
+padding:60px 30px 0px 30px ;
+flex:var(--sidebar-flex);
+background: rgb(110, 134, 150);
+background: linear-gradient(180deg, rgba(126, 172, 143, 0.356) 50%, rgb(56, 107, 92) 80%);
+}
+nav ul
+{
+  font-size:var(--fontsize-nav) ;
   text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+  color: white !important;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul li
+{
+  margin:40px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* css for active class */
+.active
+{
+font-weight: bolder;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.social
+{
+position: absolute;
+margin-top: 20px;
+display: flex;
+bottom: 60px;
 }
-
-.App-link {
-  color: #61dafb;
+/* Add Social icons */
+.social i
+{
+padding-right: 30px;
+font-size: 25px;
+color: #11171d;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social i:hover
+{
+color: #353030;
+}
+ /* Styling About */
+ .subtopic
+{
+margin:10px 10px 30px 10px !important;
+}
+p:hover
+{
+    color: #1b1d20;
+    background-color: #e6f0f3;
+    box-shadow: 0 10px 20px rgba(171, 191, 216, 0.19), 0 6px 6px rgba(75, 98, 139, 0.23);
+    font-size: var(--fontsize-p);
+}
+h1,h2,h3,h4,p
+{
+margin: 10px;
+}
+/* Styling Widecard component */
+.widecard
+{
+border:0px solid #647d96;
+display: flex;
+margin:30px 0px 30px 0px;
+}
+.widecard:hover
+{
+color: #1b1d20;
+background-color: #cfd3d4;
+box-shadow: 0 10px 20px rgba(195, 215, 238, 0.712), 0 6px 6px rgba(144, 166, 187, 0.23);
+}
+.typingeffect {
+  font-size: 28px;
+  color:#140f08;
+  text-align: center;
+  margin:40px 30px 30px 40px;
 }
